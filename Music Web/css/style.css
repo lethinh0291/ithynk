@@ -1,0 +1,258 @@
+body {
+    background: #ffffff;
+    color: 333;
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+}
+
+/* text header */
+/* Thêm hiệu ứng nhấp nháy */
+
+
+.text-header {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #f39c12;
+    display: flex;
+    /* Kích hoạt Flexbox */
+    justify-content: center;
+    /* Căn giữa theo chiều ngang */
+    align-items: center;
+    /* Căn giữa theo chiều dọc (nếu cần) */
+    width: 100%;
+    /* Đảm bảo phần tử chiếm toàn bộ chiều rộng */
+    height: auto;
+    /* Để tự điều chỉnh theo nội dung */
+    text-align: center;
+    /* Thêm căn chỉnh text */
+    margin: 0;
+    /* Loại bỏ khoảng cách không cần thiết */
+    padding: 0;
+    /* Loại bỏ padding nếu có */
+}
+
+.text-header h1 {
+    text-align: center;
+    margin: 0;
+    /* Thời gian và lặp vô hạn */
+}
+
+/* header */
+.header {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header li {
+    list-style-type: none;
+    margin-left: 10px;
+    color: #f39c12;
+}
+
+.header a {
+    text-decoration: none;
+    text-align: center;
+    color: #f39c12;
+    font-size: 60%;
+    position: relative;
+    padding-bottom: 5px;
+}
+
+/* Phần thêm hiệu ứng gạch dưới */
+.header a::after {
+    content: '';
+    /* Tạo gạch dưới bằng pseudo-element */
+    position: absolute;
+    width: 0;
+    /* Ban đầu gạch dưới có chiều rộng 0 */
+    height: 2px;
+    /* Độ dày của gạch dưới */
+    background-color: rgb(0, 0, 0);
+    /* Màu của gạch dưới */
+    bottom: 0;
+    /* Vị trí gạch dưới */
+    left: 0;
+    transition: width 0.3s ease;
+    /* Hiệu ứng gạch dưới khi hover */
+}
+
+/* Khi di chuột vào link, gạch dưới sẽ dãn ra */
+.header a:hover::after {
+    width: 100%;
+    /* Gạch dưới toàn bộ từ khi di chuột qua */
+}
+
+.back1 {
+    margin-top: 0;
+    z-index: 1;
+    width: 100%;
+}
+
+.text-title {
+    text-align: center;
+    color: #f39c12;
+}
+
+.text-title h3 {
+    color: #f39c12;
+    font-size: 100%;
+}
+
+/* Album */
+/* Album item */
+.album-container {
+    display: grid;
+    /* Kích hoạt Grid */
+    grid-template-columns: repeat(3, 1fr);
+    /* 3 cột với chiều rộng bằng nhau */
+    gap: 20px;
+    /* Khoảng cách giữa các album */
+}
+
+.album-item {
+    .album-item {
+        text-align: center;
+        background: #1e1e1e;
+        border-radius: 10px;
+        padding: 10px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    }
+}
+
+/* Hiệu ứng khi hover vào album */
+.album-item:hover {
+    transform: scale(1.1);
+    /* Phóng to album */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.5);
+}
+
+/* Ảnh album */
+.album-cover {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Âm thanh */
+audio {
+    margin-top: 10px;
+    width: 100%;
+}
+
+
+/* video */
+/* Container Video */
+.video-container {
+    display: flex;
+    /* Sử dụng Flexbox */
+    justify-content: space-between;
+    /* Dàn đều các video */
+    flex-wrap: nowrap;
+    /* Không cho xuống dòng */
+    gap: 20px;
+    /* Khoảng cách giữa các video */
+}
+
+/* Video Item */
+.video-item {
+    flex: 1 0 30%;
+    /* Mỗi video chiếm 30% chiều ngang */
+    max-width: 30%;
+    /* Giới hạn chiều ngang */
+    text-align: center;
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Hiệu ứng khi hover vào video */
+.video-item:hover {
+    transform: scale(1.1);
+    /* Phóng to video */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.5);
+}
+
+/* Ảnh bìa video */
+.video-cover {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Video */
+video {
+    margin-top: 10px;
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Footer */
+.footer {
+    background-color: #121212;
+    color: #fff;
+    padding: 40px 0;
+    margin-top: 40px;
+    font-family: Arial, sans-serif;
+    text-align: left;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0 20px;
+}
+
+.footer-item {
+    flex: 1 0 22%;
+    /* Mỗi item chiếm 22% chiều ngang */
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+.footer-item h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #f39c12;
+    /* Màu vàng cho tiêu đề */
+}
+
+.footer-item ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-item ul li {
+    margin-bottom: 10px;
+}
+
+.footer-item ul li a {
+    text-decoration: none;
+    color: #bbb;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.footer-item ul li a:hover {
+    color: #9500ff;
+    /* Màu vàng khi hover */
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    border-top: 1px solid #444;
+    padding-top: 10px;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
